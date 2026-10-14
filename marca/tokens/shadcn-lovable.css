@@ -1,0 +1,78 @@
+/* Casa di Grazi · tema shadcn/ui para Lovable (Tailwind v3)
+ * Cole dentro de src/index.css, no lugar do bloco @layer base { :root {...} .dark {...} } existente.
+ * Valores em HSL sem hsl(), como o shadcn espera: usar como hsl(var(--primary)).
+ * Conferir contrastes no manual, seção 04 (Cor).
+ */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap");
+
+@layer base {
+  :root {
+    --background: 40 43% 93%;          /* Farinha */
+    --foreground: 30 15% 10%;          /* Forno */
+    --card: 42 56% 96%;                /* Papel */
+    --card-foreground: 30 15% 10%;
+    --popover: 42 56% 96%;
+    --popover-foreground: 30 15% 10%;
+    --primary: 154 81% 23%;            /* Basilico */
+    --primary-foreground: 40 43% 93%;
+    --secondary: 41 45% 84%;           /* Massa */
+    --secondary-foreground: 30 15% 10%;
+    --muted: 41 40% 88%;
+    --muted-foreground: 33 12% 33%;    /* #5E554A */
+    --accent: 41 45% 84%;
+    --accent-foreground: 30 15% 10%;
+    --destructive: 6 96% 29%;          /* Rosso */
+    --destructive-foreground: 40 43% 93%;
+    --border: 40 26% 75%;              /* #CFC4AE */
+    --input: 40 26% 75%;
+    --ring: 154 81% 23%;
+    --radius: 0.125rem;                /* 2px */
+
+    /* extras da marca */
+    --crosta: 32 63% 47%;
+    --crosta-texto: 31 75% 32%;
+    --rosso: 6 96% 29%;
+    --verde-grazi: 153 95% 31%;
+    --success: 154 81% 23%;  --success-bg: 120 26% 89%;
+    --warning: 31 75% 32%;   --warning-bg: 38 66% 86%;
+    --danger: 6 96% 29%;     --danger-bg: 13 58% 89%;
+    --info: 30 15% 10%;      --info-bg: 41 31% 86%;
+    --pizza: 6 96% 29%;
+    --focaccia: 154 81% 23%;
+  }
+
+  .dark {
+    --background: 30 17% 7%;
+    --foreground: 39 42% 91%;
+    --card: 30 17% 9%;
+    --card-foreground: 39 42% 91%;
+    --popover: 30 17% 9%;
+    --popover-foreground: 39 42% 91%;
+    --primary: 151 61% 47%;            /* Verde claro */
+    --primary-foreground: 30 15% 10%;
+    --secondary: 33 17% 14%;
+    --secondary-foreground: 39 42% 91%;
+    --muted: 33 17% 14%;
+    --muted-foreground: 36 13% 61%;
+    --accent: 33 17% 14%;
+    --accent-foreground: 39 42% 91%;
+    --destructive: 10 77% 61%;
+    --destructive-foreground: 30 15% 10%;
+    --border: 34 16% 20%;
+    --input: 34 16% 20%;
+    --ring: 151 61% 47%;
+
+    --crosta: 34 70% 59%;
+    --crosta-texto: 34 70% 59%;
+    --success: 151 61% 47%;  --success-bg: 147 28% 12%;
+    --warning: 34 70% 59%;   --warning-bg: 37 44% 12%;
+    --danger: 10 77% 61%;    --danger-bg: 10 43% 13%;
+    --info: 39 42% 91%;      --info-bg: 36 17% 13%;
+    --pizza: 10 77% 61%;
+    --focaccia: 151 61% 47%;
+  }
+
+  html { font-family: "Instrument Sans", system-ui, sans-serif; }
+  body { background: hsl(var(--background)); color: hsl(var(--foreground)); line-height: 1.55; }
+  h1, h2, h3 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; line-height: 0.98; text-wrap: balance; }
+}

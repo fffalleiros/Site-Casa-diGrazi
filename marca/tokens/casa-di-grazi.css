@@ -1,0 +1,96 @@
+/* Casa di Grazi · tokens de marca v1.1
+ * Fonte única para site, app e peças digitais.
+ * Importe as fontes uma vez (HTML <head> ou @import):
+ * https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap
+ */
+
+:root {
+  /* ── Paleta nuclear ─────────────────────────────── */
+  --cdg-forno: #1E1A16;          /* texto, fundo escuro. Substitui o preto puro */
+  --cdg-farinha: #F5F0E6;        /* fundo principal */
+  --cdg-massa: #E8DCC3;          /* segundo fundo, rótulos, faixas */
+  --cdg-papel: #FBF8F1;          /* superfície elevada (cartões do app) */
+  --cdg-crosta: #C27C2C;         /* destaque em fundo escuro, foto. Não usar como texto sobre claro */
+  --cdg-crosta-texto: #8F5314;   /* Crosta quando for texto sobre claro */
+  --cdg-rosso: #921103;          /* da logo. Pizza, preço, assinatura */
+  --cdg-verde: #049A56;          /* da logo. Só áreas grandes e selos */
+  --cdg-basilico: #0B6B41;       /* verde para texto, botão e focaccia */
+
+  /* ── Neutros de apoio ───────────────────────────── */
+  --cdg-texto-suave: #5E554A;    /* texto secundário: 6,4:1 sobre Farinha */
+  --cdg-linha: #CFC4AE;          /* filetes e bordas */
+
+  /* ── Semânticas (app) ───────────────────────────── */
+  --cdg-sucesso: #0B6B41;  --cdg-sucesso-bg: #DDEBDD;
+  --cdg-alerta:  #8F5314;  --cdg-alerta-bg:  #F3E2C4;
+  --cdg-erro:    #921103;  --cdg-erro-bg:    #F3D9D2;
+  --cdg-info:    #1E1A16;  --cdg-info-bg:    #E6DFD0;
+
+  /* ── Papéis (use estes nos componentes) ─────────── */
+  --cdg-bg: var(--cdg-farinha);
+  --cdg-fg: var(--cdg-forno);
+  --cdg-surface: var(--cdg-papel);
+  --cdg-muted-fg: var(--cdg-texto-suave);
+  --cdg-border: var(--cdg-linha);
+  --cdg-action: var(--cdg-basilico);       /* botão principal */
+  --cdg-action-fg: var(--cdg-farinha);
+  --cdg-pizza: var(--cdg-rosso);           /* território pizza */
+  --cdg-focaccia: var(--cdg-basilico);     /* território focaccia */
+
+  /* ── Tipografia ─────────────────────────────────── */
+  --cdg-font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --cdg-font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --cdg-font-mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+  --cdg-font-hand: "Caveat", "Bradley Hand", cursive; /* reserva até digitalizar a letra da Grazi */
+
+  /* escala (mobile → desktop com clamp) */
+  --cdg-text-display: clamp(3.25rem, 9vw, 8rem);     /* só capa e hero */
+  --cdg-text-h1: clamp(2.5rem, 6vw, 4.5rem);
+  --cdg-text-h2: clamp(2rem, 4vw, 3.25rem);
+  --cdg-text-h3: clamp(1.5rem, 2.4vw, 2rem);
+  --cdg-text-lead: 1.25rem;
+  --cdg-text-body: 1.0625rem;                         /* 17px */
+  --cdg-text-small: 0.9375rem;
+  --cdg-text-label: 0.75rem;                          /* mono e rótulos */
+  --cdg-leading-tight: 0.98;
+  --cdg-leading-body: 1.55;
+  --cdg-tracking-label: 0.06em;
+  --cdg-tracking-cond: 0.08em;
+
+  /* ── Forma, espaço, movimento ───────────────────── */
+  --cdg-radius: 2px;             /* máximo 4px */
+  --cdg-line: 1px solid var(--cdg-border);
+  --cdg-line-strong: 1px solid var(--cdg-fg);
+  --cdg-shadow: none;            /* sem sombras no sistema */
+  --cdg-space-1: 4px;  --cdg-space-2: 8px;  --cdg-space-3: 12px; --cdg-space-4: 16px;
+  --cdg-space-5: 24px; --cdg-space-6: 32px; --cdg-space-7: 48px; --cdg-space-8: 72px; --cdg-space-9: 112px;
+  --cdg-measure: 64ch;           /* largura máxima de texto corrido */
+  --cdg-container: 1160px;
+  --cdg-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --cdg-dur-fast: 120ms; --cdg-dur: 200ms; --cdg-dur-slow: 320ms;
+}
+
+/* Escuro: aplique class="dark" ou data-theme="dark" no <html> */
+.dark, :root[data-theme="dark"] {
+  --cdg-bg: #15120F;
+  --cdg-fg: #F1EADD;
+  --cdg-surface: #1C1814;
+  --cdg-muted-fg: #A99F90;
+  --cdg-border: #3A332A;
+  --cdg-action: #2FBF7A;
+  --cdg-action-fg: #1E1A16;
+  --cdg-pizza: #E8664D;
+  --cdg-focaccia: #2FBF7A;
+  --cdg-crosta: #E0A04F;
+  --cdg-sucesso: #2FBF7A; --cdg-sucesso-bg: #16261D;
+  --cdg-alerta:  #E0A04F; --cdg-alerta-bg:  #2B2113;
+  --cdg-erro:    #E8664D; --cdg-erro-bg:    #2E1814;
+  --cdg-info:    #F1EADD; --cdg-info-bg:    #26211B;
+}
+
+/* ── Utilitários mínimos ──────────────────────────── */
+.cdg-serif { font-family: var(--cdg-font-serif); font-weight: 400; line-height: var(--cdg-leading-tight); }
+.cdg-cond  { font-family: var(--cdg-font-sans); font-stretch: 75%; font-weight: 600; text-transform: uppercase; letter-spacing: var(--cdg-tracking-cond); }
+.cdg-mono  { font-family: var(--cdg-font-mono); font-size: var(--cdg-text-label); letter-spacing: var(--cdg-tracking-label); text-transform: uppercase; }
+.cdg-hand  { font-family: var(--cdg-font-hand); color: var(--cdg-rosso); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
