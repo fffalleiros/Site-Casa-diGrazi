@@ -44,4 +44,11 @@ ACESSIBILIDADE
 - Texto com contraste mínimo de 4,5:1 (3:1 para texto grande). Foco visível: anel de 2 px.
 - Texto alternativo que descreve produto e cena.
 
+LOGO
+- Use os SVGs de marca/logo/. Nunca use o JPEG antigo nem redesenhe a logo.
+- CDG_logo_selo_simples.svg no site, no app e nas redes. CDG_logo_selo_completo.svg em telas grandes (hero, login).
+- Fundos escuros: CDG_logo_selo_1cor_farinha.svg ou o selo completo (o disco branco sustenta).
+- Tamanho mínimo do selo: 140 px. Abaixo disso, use o texto "CASA DI GRAZI" em condensada.
+- Respeite a área de proteção (10% do diâmetro) e não aplique efeitos, sombra ou rotação.
+
 Referência completa: marca/manual-de-marca-v1.1.html

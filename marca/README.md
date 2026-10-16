@@ -6,6 +6,21 @@
 - `tokens/shadcn-lovable.css` — tema shadcn/ui em HSL, para colar no `src/index.css` do Lovable.
 - `tokens/tailwind.config.snippet.js` — cores, fontes, raio e movimento para o Tailwind.
 - `LOVABLE-BRIEF.md` — texto pronto para colar no Lovable ao aplicar a marca no site e no app.
-- `assets/logo-selo-640.png` — referência da logo (640 px). Não serve para produção: falta o vetorial.
 
-Pendências antes de publicar: vetorizar a logo, digitalizar a letra da Grazi, validar cardápio, preços, validade e instrução de forno. Lista completa na seção 12 do manual.
+## Logo em vetor (`logo/`)
+
+| Arquivo | Uso |
+|---|---|
+| `CDG_logo_selo_completo.svg` e `.pdf` | Versão principal, com aquarela e trigo. Impressos, embalagem, tela de login. |
+| `CDG_logo_selo_simples.svg` e `.pdf` | Cores chapadas. Site, app, redes, tamanhos menores. |
+| `CDG_logo_selo_1cor_preto.svg` e `.pdf` | Um tom, preto. Carimbo, estampa, etiqueta monocromática. |
+| `CDG_logo_selo_1cor_farinha.svg` | Um tom, cor Farinha. Fundos escuros. |
+| `png/` | Exportações com fundo transparente fora do selo (512, 1024, 3000 px). |
+
+Os arquivos foram gerados por vetorização em camadas do JPEG de 1080 px do manual v1.0, com as mesmas cores e a mesma composição. Nada foi redesenhado. A aquarela e o trigo são aproximações vetoriais. Os PDFs estão em RGB.
+
+Antes de rodar embalagem em grande formato: um designer deve conferir os arquivos, validar as cores em prova e gerar o PDF em CMYK.
+
+## Pendências
+
+Letra da Grazi digitalizada, validação de cardápio, preços, validade e instrução de forno, PDF em CMYK. Lista completa na seção 12 do manual.
